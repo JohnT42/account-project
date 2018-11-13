@@ -18,12 +18,8 @@ public class Service {
 			return json.toString();
 }
 
-		public Object countName(String name) {
-int nameCount=0;
-for (Person user: map.values()) {
-	if(user.getFirstname().equals(name))
-		nameCount ++;
-}
-			return nameCount;
+		public long countName(String name) {
+long result=map.entrySet().stream().filter(user->user.getFirstname().equals(name)).count();
+return result;
 		}
 }
