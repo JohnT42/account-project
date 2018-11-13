@@ -3,10 +3,11 @@ package com.qa.simple.account_application;
 public class Person {
 	String firstName;
 	String lastName;
-	int accountNumber;
- public Person(String firstName, String lastName) {
+	String accountId;
+ public Person(String firstName, String lastName, String accountId) {
 			this.firstName=firstName;
 			this.lastName=lastName;
+			this.accountId=accountId;
 			}
 		public  String getFirstname() {
 			return firstName;
@@ -16,8 +17,8 @@ public class Person {
 			return lastName;
 			}
 		
-		/*public int getaccountNumber() {
-			return accountNumber;
+		public String getAccountId() {
+			return accountId;
 			}
 		
 		public  String setFirstname() {
@@ -26,5 +27,9 @@ public class Person {
 		
 		public  String setLastname() {
 			return lastName;
-			}*/
+		}
+			
+		public  String setAccountId() {
+			return accountId;
+			}
 }
