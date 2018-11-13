@@ -17,4 +17,9 @@ public class Service {
 			System.out.println(json.toString());
 			return json.toString();
 }
+
+		public int countName(String name) {
+int result=(int) map.values().stream().filter(person-> person.getFirstname().equals(name)).count();
+return result;
+		}
 }
