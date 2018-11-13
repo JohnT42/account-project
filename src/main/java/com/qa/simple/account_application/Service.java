@@ -18,8 +18,8 @@ public class Service {
 			return json.toString();
 }
 
-		public long countName(String name) {
-long result=map.entrySet().stream().filter(user->((Person) user).getFirstname().equals(name)).count();
+		public int countName(String name) {
+int result=(int) map.values().stream().filter(person-> person.getFirstname().equals(name)).count();
 return result;
 		}
 }
