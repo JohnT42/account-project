@@ -20,7 +20,7 @@ public void test2() {
 	user.addAccount("Peter", "Tran","2");
 	user.addAccount("Peter", "Tran","3");
 	user.addAccount("John", "Tran","4");
-	assertEquals(0, user.countName("John"));
+	assertEquals(1, user.countName("John"));
 	}
 
 @Test
@@ -29,7 +29,7 @@ public void test3() {
 	user.addAccount("Peter", "Tran","2");
 	user.addAccount("John", "Tran","3");
 	user.addAccount("John", "Tran","4");
-	assertEquals(0, user.countName("John"));
+	assertEquals(2, user.countName("John"));
 	}
 
 @Test
@@ -38,7 +38,7 @@ public void test4() {
 	user.addAccount("John", "Tran","2");
 	user.addAccount("John", "Tran","3");
 	user.addAccount("John", "Tran","4");
-	assertEquals(0, user.countName("John"));
+	assertEquals(3, user.countName("John"));
 	}
 }
 

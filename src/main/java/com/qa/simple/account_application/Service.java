@@ -17,4 +17,13 @@ public class Service {
 			System.out.println(json.toString());
 			return json.toString();
 }
+
+		public Object countName(String name) {
+int nameCount=0;
+for (Person user: map.values()) {
+	if(user.getFirstname().equals(name))
+		nameCount ++;
+}
+			return nameCount;
+		}
 }
