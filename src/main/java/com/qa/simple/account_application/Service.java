@@ -19,7 +19,7 @@ public class Service {
 }
 
 		public long countName(String name) {
-long result=map.entrySet().stream().filter(user->user.getFirstname().equals(name)).count();
+long result=map.entrySet().stream().filter(user->((Person) user).getFirstname().equals(name)).count();
 return result;
 		}
 }
